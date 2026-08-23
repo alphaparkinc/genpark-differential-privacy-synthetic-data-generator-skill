@@ -1,0 +1,41 @@
+{
+  "name": "genpark-differential-privacy-synthetic-data-generator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Differential privacy synthetic tabular data generator producing statistically identical test datasets with zero mathematical PII leakage.",
+  "author": "genpark",
+  "category": "data",
+  "tags": [
+    "synthetic-data",
+    "differential-privacy",
+    "pii-masking",
+    "gdpr-compliance",
+    "gretel"
+  ],
+  "inputs": {
+    "schema_definition": {
+      "type": "object"
+    },
+    "record_count": {
+      "type": "integer"
+    },
+    "epsilon_budget": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "records_generated_count": {
+      "type": "integer"
+    },
+    "statistical_fidelity_score": {
+      "type": "number"
+    },
+    "pii_leakage_risk_pct": {
+      "type": "number"
+    },
+    "compliance_certification": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
